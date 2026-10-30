@@ -47,7 +47,10 @@ namespace afernandezExamen.Views
         {
             try
             {
-                string contenido = $"Nombre: {_nombre}\n" +
+                string contenido = $"========================================\n" +
+                                   $"        RESUMEN DE REGISTRO SOCIO\n" +
+                                   $"========================================\n" +
+                                   $"Nombre: {_nombre}\n" +
                                    $"Apellido: {_apellido}\n" +
                                    $"Edad: {_edad}\n" +
                                    $"Fecha de Inicio: {_fechaInicio}\n" +
@@ -55,7 +58,8 @@ namespace afernandezExamen.Views
                                    $"Casillero: {_casillero}\n" +
                                    $"Monto Inicial: ${_montoInicial:F2}\n" +
                                    $"Pago Mensual: ${_pagoMensual:F2}\n" +
-                                   $"Pago Total: ${_pagoTotal:F2}\n";
+                                   $"Pago Total: ${_pagoTotal:F2}\n" +
+                                   $"========================================\n";
 
                 string fileName = $"Socio_{_nombre}_{_apellido}.txt";
                 string targetPath = Path.Combine(FileSystem.CacheDirectory, fileName);
@@ -72,6 +76,7 @@ namespace afernandezExamen.Views
 
         private void OnCerrarSesionClicked(object sender, EventArgs e)
         {
+            // Regresa a la ventana raíz (Login)
             Navigation.PopToRootAsync();
         }
     }

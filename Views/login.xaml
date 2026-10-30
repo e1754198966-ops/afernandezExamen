@@ -6,12 +6,13 @@
 
     <ScrollView>
         <StackLayout Spacing="10" Padding="20">
-            <Image Source="logo.png" 
+            <Image Source="gym.jpg" 
                    HeightRequest="100" 
                    HorizontalOptions="Center" />
 
+            <!-- Estilo Global Aplicado -->
             <Label Text="GIMNASIO" 
-                   HorizontalTextAlignment="Center" />
+                   Style="{StaticResource TituloLoginStyle}" />
 
             <Grid RowDefinitions="Auto, Auto, Auto" 
                   ColumnDefinitions="Auto, *" 
@@ -31,6 +32,7 @@
                         Clicked="OnLoginClicked" />
             </Grid>
 
+            <!-- Botón Acerca de que despliega la alerta emergente -->
             <Button Text="Acerca de" 
                     Clicked="OnAcercaDeClicked" />
         </StackLayout>

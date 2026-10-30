@@ -2,7 +2,6 @@ namespace afernandezExamen.Views
 {
     public partial class login : ContentPage
     {
-        // Creación de la matriz 4x2 con los usuarios y contraseñas solicitados
         private readonly string[,] usuariosMatriz = new string[4, 2]
         {
             { "recepcion", "gym2026" },
@@ -23,7 +22,6 @@ namespace afernandezExamen.Views
 
             bool credencialesValidas = false;
 
-            // Recorremos la matriz para validar las credenciales ingresadas
             for (int i = 0; i < 4; i++)
             {
                 if (usuariosMatriz[i, 0] == usuarioInput && usuariosMatriz[i, 1] == passwordInput)
@@ -46,6 +44,7 @@ namespace afernandezExamen.Views
 
         private void OnAcercaDeClicked(object sender, EventArgs e)
         {
+            // Ventana emergente con la información del estudiante
             DisplayAlert("Acerca de", "Nombre: Anthony Fernández\nCarrera: Ingeniería en Sistemas\nParalelo: A", "OK");
         }
     }
